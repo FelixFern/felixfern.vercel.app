@@ -1,7 +1,7 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
 import Hero from "../components/Hero.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.jsx";
 ---
 
 <html lang="en">
@@ -13,7 +13,7 @@ import Navbar from "../components/Navbar.astro";
         <title>Felix Fernando's Portofolio</title>
     </head>
     <body class="bg-main text-textmain overflow-x-hidden">
-        <Navbar />
+        <Navbar client:only />
         <Hero />
         <AboutMe />
     </body>

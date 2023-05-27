@@ -1,0 +1,94 @@
+
+
+nav {
+    .links {
+        position: relative;
+        opacity: 1;
+        a {
+            &::after {
+                transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                content: "";
+                position: absolute;
+                background-color: #ff985f;
+                border-radius: 0;
+                height: 100%;
+                width: 0%;
+                bottom: 0px;
+                left: 0px;
+                z-index: -1;
+            }
+            &::before {
+                transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                content: "";
+                position: absolute;
+                background-color: #151515;
+                border-radius: 0;
+                height: 100%;
+                width: 0%;
+                bottom: 0px;
+                left: -5px;
+                z-index: 99;
+            }
+        }
+    }
+    &.scrolled {
+        .links {
+            transition: 0.01s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            transition-delay: 0.4s;
+            transform: translateY(-1000%);
+            opacity: 0;
+            a {
+                &::after {
+                    transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    width: 100%;
+                }
+                &::before {
+                    transition: 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    transition-delay: 0.1s;
+                    width: 110%;
+                }
+            }
+        }
+    }
+}
+
+.links {
+    position: relative;
+    width: fit-content;
+    a {
+        padding: 0 4px;
+    }
+    &:hover {
+        &::after {
+            transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            width: 90%;
+        }
+        &::before {
+            transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            width: 100%;
+        }
+    }
+    &::after {
+        transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        content: "";
+        position: absolute;
+        background-color: white;
+        height: 2px;
+        width: 0%;
+        left: 0;
+        bottom: -6px;
+        border-radius: 10px;
+    }
+    &::before {
+        transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        content: "";
+        position: absolute;
+        background-color: #ff985f;
+        height: 2px;
+        width: 0%;
+        left: 0;
+        bottom: -6px;
+        border-radius: 10px;
+        z-index: -1;
+    }
+}
