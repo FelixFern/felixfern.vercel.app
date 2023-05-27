@@ -1,7 +1,7 @@
 ---
 ---
 
-<nav class="fixed left-1/2 translate-x-[-50%]">
+<nav class="fixed left-1/2 translate-x-[-50%] z-50">
     <ul class="text-textmain font-black flex gap-12 mt-10">
         <li class="links">
             <a href="">works<span class="text-accent">.</span></a>
@@ -17,23 +17,43 @@
 
 <style lang="scss">
     .links {
+        position: relative;
         width: fit-content;
-
-        &::after {
-            transition: 0.25s;
-            content: "";
-            position: fixed;
-            bottom: -6px;
-            left: 0;
-            width: 0%;
-            height: 4px;
-            background-color: white;
+        a {
+            padding: 4px;
         }
         &:hover {
             &::after {
-                transition: 0.25s;
+                transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                width: 90%;
+            }
+            &::before {
+                transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
                 width: 100%;
             }
+        }
+        &::after {
+            transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            content: "";
+            position: absolute;
+            background-color: white;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            bottom: -6px;
+            border-radius: 10px;
+        }
+        &::before {
+            transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            content: "";
+            position: absolute;
+            background-color: #ff985f;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            bottom: -6px;
+            border-radius: 10px;
+            z-index: -1;
         }
     }
 </style>

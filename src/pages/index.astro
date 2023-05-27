@@ -1,4 +1,5 @@
 ---
+import AboutMe from "../components/AboutMe.astro";
 import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro";
 ---
@@ -11,8 +12,9 @@ import Navbar from "../components/Navbar.astro";
         <meta name="generator" content={Astro.generator} />
         <title>Felix Fernando's Portofolio</title>
     </head>
-    <body class="bg-main text-textmain">
-		<Navbar></Navbar>
-		<Hero></Hero>
+    <body class="bg-main text-textmain overflow-x-hidden">
+        <Navbar />
+        <Hero />
+        <AboutMe />
     </body>
 </html>

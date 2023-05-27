@@ -1,8 +1,11 @@
 ---
+import BlurCircle from "./BlurCircle.astro";
 import Button from "./Button.astro";
 ---
 
-<div class="h-screen w-screen flex flex-col items-center justify-center gap-4">
+<div
+    class="h-screen w-screen flex flex-col items-center justify-center gap-4 overflow-hidden relative"
+>
     <div>
         <p class="font-black text-xs flex gap-2 items-center">
             <span class="px-1.5 py-0.5 bg-white text-main">HELLO.</span> my name
@@ -16,4 +19,7 @@ import Button from "./Button.astro";
     <a href="/">
         <Button title="resume." />
     </a>
+    <BlurCircle classes={"h-[120vh] w-[120vh] bottom-[-100vh] "} />
+    <BlurCircle classes={"h-[40vh] w-[40vh] left-[-35vh] "} />
+    <BlurCircle classes={"h-[50vh] w-[50vh] right-[-35vh] top-[-25vh]"} />
 </div>
