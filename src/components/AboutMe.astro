@@ -1,4 +1,58 @@
 ---
+import BlurCircle from "./BlurCircle.astro";
 ---
 
-<div class="h-screen w-screen"></div>
+<div class="mx-auto h-screen w-screen relative">
+    <div
+        class="h-screen w-5/6 mx-auto relative flex flex-col items-center justify-center gap-6"
+    >
+        <div
+            class="md:absolute md:top-[50%] md:left-[-15%] md:translate-y-[-50%] md:rotate-90 relative"
+        >
+            <h1 class="text-4xl font-black absolute bottom-[16px] left-[16px]">
+                About <span class="text-accent">Me.</span>
+            </h1>
+            <h1 class="text-6xl md:text-8xl opacity-5 font-black">about me.</h1>
+        </div>
+        <div class="flex items-center justify-center w-8/12 mx-auto">
+            <div>
+                <div class="flex flex-col gap-5">
+                    <p class="">
+                        <span class="font-bold">Hello!</span> My name is <span
+                            class="font-bold text-accent">Felix Fernando</span
+                        >, <br /> Currently a university student from a small town
+                        called
+                        <span class="font-bold">Bintan, Kepulauan Riau</span> that
+                        is currently studying <span class="font-bold"
+                            >Mathematics</span
+                        > at the <span class="font-bold"
+                            >Faculty of Mathematics and Natural Sciences</span
+                        >, <span class="font-bold text-accent"
+                            >Bandung Institute of Technology</span
+                        >.
+                    </p>
+                    <p>
+                        I’m passionate in creating <span class="font-bold"
+                            >beautiful <span class="text-accent">website</span
+                            ></span
+                        >. Other than building website, I’m also passionate in
+                        doing
+                        <span class="font-bold">Machine Learning</span> and <span
+                            class="font-bold">Data Science</span
+                        >
+                    </p>
+                    <p>
+                        Here are few <span class="font-bold"
+                            >technology stack</span
+                        >
+                        that I am familiar with
+                    </p>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+    <BlurCircle classes={"h-[40vh] w-[40vh] top-[50%] left-[-10%]"} />
+    <BlurCircle classes={"h-[50vh] w-[50vh] top-[0%] right-[-15%]"} />
+</div>
