@@ -1,7 +1,7 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
-import Hero from "../components/Hero.astro";
-import Navbar from "../components/Navbar.jsx";
+import Hero from "../components/Hero.jsx";
+import Navbar from "../components/Navbar/Navbar.jsx";
 ---
 
 <html lang="en">
@@ -12,9 +12,15 @@ import Navbar from "../components/Navbar.jsx";
         <meta name="generator" content={Astro.generator} />
         <title>Felix Fernando's Portofolio</title>
     </head>
-    <body class="bg-main text-textmain overflow-x-hidden">
-        <Navbar client:only />
-        <Hero />
+    <body
+        class="bg-main text-textmain overflow-x-hidden font-nunitoSans scroll-smooth"
+    >
+        <Navbar client:load />
+        <Hero client:load />
         <AboutMe />
     </body>
 </html>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Source+Sans+Pro:wght@700&display=swap");
+</style>

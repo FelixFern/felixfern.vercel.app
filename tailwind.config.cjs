@@ -12,6 +12,10 @@ module.exports = {
             letterSpacing: {
                 widest: ".25rem",
             },
+            fontFamily: {
+                nunitoSans: "'Nunito Sans', sans-serif",
+                sourceSans: "'Source Sans Pro', sans-serif",
+            },
         },
     },
     plugins: [],

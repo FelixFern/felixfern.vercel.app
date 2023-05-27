@@ -1,0 +1,27 @@
+.button-container {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        color: white;
+        svg {
+            path {
+                fill: white;
+            }
+        }
+        &::after {
+            z-index: -1;
+            transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            width: 100%;
+        }
+    }
+    &::after {
+        transition: 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 0;
+        left: 0;
+        right: 0;
+        background-color: #ff985f;
+    }
+}
