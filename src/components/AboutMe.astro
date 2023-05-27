@@ -1,5 +1,18 @@
 ---
 import BlurCircle from "./BlurCircle/BlurCircle.jsx";
+import StackBadge from "./StackBadge.astro";
+const stack = [
+    { name: "React.js", color: "main", icon: "mdi:react" },
+    { name: "Next.js", color: "main", icon: "teenyicons:nextjs-solid" },
+    { name: "Python", color: "secondary", icon: "mdi:language-python" },
+    { name: "Typescript", color: "main", icon: "mdi:language-typescript" },
+    { name: "Javascript", color: "main", icon: "mdi:language-javascript" },
+    { name: "Tailwind", color: "main", icon: "mdi:tailwind" },
+    { name: "SASS", color: "main", icon: "mdi:sass" },
+    { name: "Flask", color: "secondary", icon: "simple-icons:flask" },
+    { name: "FastAPI", color: "secondary", icon: "simple-icons:fastapi" },
+    { name: "Matlab", color: "secondary", icon: "file-icons:matlab" },
+];
 ---
 
 <div class="mx-auto h-screen w-screen relative" id="about-me">
@@ -47,10 +60,11 @@ import BlurCircle from "./BlurCircle/BlurCircle.jsx";
                         >
                         that I am familiar with
                     </p>
+                    <div class="flex gap-4 flex-auto flex-wrap">
+                        {stack.map((val) => <StackBadge {...val} />)}
+                    </div>
                 </div>
             </div>
-
-            <div></div>
         </div>
     </div>
     <BlurCircle classes={"h-[40vh] w-[40vh] top-[50%] left-[-10%]"} />
