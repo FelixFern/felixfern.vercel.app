@@ -16,6 +16,9 @@ module.exports = {
                 nunitoSans: "'Nunito Sans', sans-serif",
                 sourceSans: "'Source Sans Pro', sans-serif",
             },
+            border: {
+                1: "1px",
+            },
         },
     },
     plugins: [],

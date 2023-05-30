@@ -87,7 +87,9 @@ const Hero = () => {
             >
                 <Button title="resume." />
             </motion.a>
-            <BlurCircle classes={"h-[120vh] w-[120vh] bottom-[-100vh] "} />
+            <BlurCircle
+                classes={"h-[120vh] w-[120vh] bottom-[-100vh] delay-1000"}
+            />
             <BlurCircle classes={"h-[80vh] w-[80vh] left-[-55vh] "} />
             <BlurCircle
                 classes={"h-[70vh] w-[70vh] right-[-30vh] top-[-30vh]"}
