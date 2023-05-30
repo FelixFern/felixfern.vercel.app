@@ -6,7 +6,7 @@ const { name, color, icon } = Astro.props;
 <div class=`${color === "main" ? "text-accent" : ""} flex gap-2 items-center`>
     <Icon name={`${icon}`} />
     <div
-        class=`py-[2px] px-2 font-bold border-[1px] rounded-md ${ color === "main" ?"border-accent" :"border-white"} `
+        class=`py-[2px] px-2 font-bold border-[1px] rounded-md font-robotoMono ${ color === "main" ?"border-accent" :"border-white"}`
     >
         {name}
     </div>

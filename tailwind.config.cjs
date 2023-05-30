@@ -15,6 +15,7 @@ module.exports = {
             fontFamily: {
                 nunitoSans: "'Nunito Sans', sans-serif",
                 sourceSans: "'Source Sans Pro', sans-serif",
+                robotoMono: "'Roboto Mono', monospace;",
             },
             border: {
                 1: "1px",
