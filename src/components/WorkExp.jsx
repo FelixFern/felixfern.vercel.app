@@ -69,7 +69,6 @@ const WorkExp = () => {
 								transition={{
 									duration: 0.2,
 									ease: "easeIn",
-									delay: ".2",
 								}}
 								className="h-1 bg-white"
 							></motion.div>
