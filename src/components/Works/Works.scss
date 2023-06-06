@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+    position: relative;
+    width: 100%;
+    padding: 2rem 0;
+    background: inherit;
+
+    &::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -16.67%;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        padding-left: 20px;
+        box-shadow: inset 0 0 2000px #14141400;
+        backdrop-filter: blur(5px);
+    }
+
+    .underline {
+        z-index: -1;
+        position: absolute;
+        height: 20px;
+        bottom: calc(-4px + 2rem); 
+        left: 2.25rem;
+        @apply border-2 border-accent;
+    }
+}

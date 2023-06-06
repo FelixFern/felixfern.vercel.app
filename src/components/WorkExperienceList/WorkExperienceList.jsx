@@ -45,7 +45,7 @@ const WorkExperienceList = ({ data }) => {
 						</span>
 					</h2>
 					<h3 className="text-sm">
-						<span className="font-bold">
+						<span className="font-normal">
 							{data[currentIndex].location} |{" "}
 							{data[currentIndex].period}
 						</span>
