@@ -8,7 +8,7 @@ import BlurCircle from "../BlurCircle/BlurCircle.jsx";
 
 const Works = () => {
 	return (
-		<div className="h-screen w-fit relative">
+		<div className="h-[50vh] w-fit relative">
 			<div className="w-5/6 h-fit mx-auto">
 				<motion.div
 					className="title sticky mb-24 pt-12 left-0 top-0"

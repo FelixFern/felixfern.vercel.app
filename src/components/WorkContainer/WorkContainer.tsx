@@ -4,32 +4,23 @@ import { MdOpenInNew } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import "./WorkContainer.scss";
 import { useScroll, useTransform } from "framer-motion";
+import ImageCarousel from "../ImageCarousel/ImageCarousel";
 
 const WorkContainer = ({ work }: { work: TWorkItem }) => {
 	const targetRef = useRef(null);
-	const { scrollYProgress } = useScroll({
-		target: targetRef,
-		offset: ["start end", "end start"],
-	});
-	const translateX = useTransform(scrollYProgress, [0, 1], [0, -1000]);
-	const scale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
-
-	useEffect(() => {
-		console.log(translateX);
-	}, [translateX]);
 	return (
 		<div
-			className="flex w-full h-screen items-center gap-4"
+			className="flex w-full h-[75vh] items-center gap-4"
 			ref={targetRef}
 		>
-			<div className="detail w-full h-screen flex items-center">
+			<div className="detail w-full h-full flex items-center">
 				<div className="w-5/12">
 					<div className="flex gap-1 mb-1">
 						<h1 className="font-black text-3xl">{work.title}</h1>
 						{work.links !== "" ? (
 							<a
 								href={work.links}
-								className="text-accent text-xl hover:opacity-75 transition-opacity"
+								className="text-accent text-xl hover:opacity-75 transition-all hover:translate-y-[-0.1rem]"
 							>
 								<MdOpenInNew></MdOpenInNew>
 							</a>
@@ -64,11 +55,7 @@ const WorkContainer = ({ work }: { work: TWorkItem }) => {
 					)}
 				</div>
 			</div>
-			<div className="flex-grow flex overflow-hidden absolute -z-10 gap-2 translate-x-[50%]">
-				{work.image.map((image) => (
-					<img src={image} key={image} className="w-1/2"></img>
-				))}
-			</div>
+			<ImageCarousel images={work.image}></ImageCarousel>
 		</div>
 	);
 };

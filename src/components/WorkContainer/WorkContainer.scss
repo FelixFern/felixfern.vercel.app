@@ -1,3 +1,11 @@
 .detail {
-    background: linear-gradient(90deg, rgba(20, 20, 20, 0.95) 50.85%, rgba(20, 20, 20, 0) 100%);
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        background: linear-gradient(90deg, rgba(20, 20, 20, 1) 50.85%, rgba(20, 20, 20, 0) 100%);
+        width: 100vw;
+        height: 100vh;
+    }
 }
