@@ -3,24 +3,29 @@ import { TWorkItem } from "../../const/works_item";
 import { MdOpenInNew } from "react-icons/md";
 import { AiFillGithub } from "react-icons/ai";
 import "./WorkContainer.scss";
-import { useScroll, useTransform } from "framer-motion";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import { useState } from "react";
 import BlurCircle from "../BlurCircle/BlurCircle";
 
 const WorkContainer = ({ work }: { work: TWorkItem }) => {
 	const targetRef = useRef(null);
-	const [randomSize, setRandomSize] = useState(0)
-	const [randomPositionX, setRandomPositionX] = useState(0)
-	const [randomPositionY, setRandomPositionY] = useState(0)
+	const [randomSize, setRandomSize] = useState(0);
+	const [randomPositionX, setRandomPositionX] = useState(0);
+	const [randomPositionY, setRandomPositionY] = useState(0);
 
 	useEffect(() => {
-		const sizeInterval = [10, 25]
-		const posInterval = 100
-		setRandomSize(Math.floor(Math.random() * sizeInterval[1] / 2 + sizeInterval[0]))
-		setRandomPositionX(Math.floor(Math.random() * 2 * posInterval - posInterval))
-		setRandomPositionY(Math.floor(Math.random() * 2 * posInterval - posInterval))
-	}, [])
+		const sizeInterval = [10, 25];
+		const posInterval = 100;
+		setRandomSize(
+			Math.floor((Math.random() * sizeInterval[1]) / 2 + sizeInterval[0])
+		);
+		setRandomPositionX(
+			Math.floor(Math.random() * 2 * posInterval - posInterval)
+		);
+		setRandomPositionY(
+			Math.floor(Math.random() * 2 * posInterval - posInterval)
+		);
+	}, []);
 
 	return (
 		<div
