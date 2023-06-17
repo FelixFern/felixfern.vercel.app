@@ -1,0 +1,66 @@
+---
+import Button from "./Button/Button";
+import { Icon } from "astro-icon";
+import { contacts } from "../const/contact";
+import BlurCircle from "./BlurCircle/BlurCircle";
+---
+
+<div class="w-screen h-fit mt-[6rem] relative overflow-hidden">
+    <div class="h-screen w-full flex items-center justify-center flex-col">
+        <div class="text-center">
+            <h1 class="font-black text-4xl">
+                Get in <span class="text-accent">touch.</span>
+            </h1>
+            <p class="my-2 font-light">
+                interested in working or collaborate on a project together?
+            </p>
+        </div>
+        <div class="contact-btn my-2">
+            <Button title="contact me." />
+        </div>
+        <div class="flex gap-6 h-fit w-fit mt-2 z-50">
+            {
+                contacts.map((contact) => (
+                    <a
+                        href={contact.links}
+                        class="text-xl text-white w-8 h-8 hover:text-accent transition-colors"
+                    >
+                        <Icon name={`${contact.icon}`} />
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+    <footer class="w-screen h-fit py-4">
+        <div class="w-5/6 mx-auto text-sm flex items-end gap-2">
+            <div class="w-fit h-full">
+                <p class="font-robotoMono">Developed and Designed</p>
+                <p class="font-robotoMono">
+                    by <span class="text-accent">Felix Fernando</span> - <span
+                        class="font-bold">2023</span
+                    >
+                </p>
+            </div>
+            <div class="h-[1px] flex-grow bg-white mb-2"></div>
+        </div>
+    </footer>
+    <BlurCircle classes={"h-[40vh] w-[40vh] top-[100%] left-[-10%]"} />
+    <BlurCircle classes={"h-[50vh] w-[50vh] top-[0%] right-[-15%]"} />
+    <BlurCircle classes={"h-[25vh] w-[25vh] top-[50%] right-[50%]"} />
+</div>
+
+<style lang="scss">
+    .contact-btn {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        &::after {
+            content: url("/public/arrow.svg");
+            position: absolute;
+            height: fit-content;
+            width: fit-content;
+            right: 110%;
+            top: 15%;
+        }
+    }
+</style>

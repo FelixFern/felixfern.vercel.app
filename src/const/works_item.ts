@@ -39,7 +39,7 @@ export const works_item = [
 		links: "https://sskdesigninterior.com/",
 		stacks: ["React.js", "Express.js", "Node.js"],
 		repository: "",
-		desc: "a Fully responsive portofolio website created for Sinar Surya Kontrarindo. This project is built with React as the frontend and ExpressJS as the backend, this project utilise ExpressJS to crawl the folder project to access the portofolio by folder. This website project is designed in Figma.",
+		desc: "a Fully responsive portfolio website created for Sinar Surya Kontrarindo. This project is built with React as the frontend and ExpressJS as the backend, this project utilise ExpressJS to crawl the folder project to access the portofolio by folder. This website project is designed in Figma.",
 		category: "Web Application",
 		image: [
 			"/projects/ssk/ssk-1.png",
@@ -62,11 +62,11 @@ export const works_item = [
 		],
 	},
 	{
-		title: "Joel Foo's Portofolio Website (Links Not Available)",
+		title: "Joel Foo's Portfolio Website",
 		links: "",
 		stacks: ["React.js", "Strapi"],
 		repository: "https://joelfoofoo.netlify.app/",
-		desc: "a Fully responsive portofolio website built for a videographer and filmographer based on Tangerang, Joel Foo. This website is built with Strapi as the CMS, React as the frontend, and designed with Figma.",
+		desc: "a Fully responsive portfolio website built for a videographer and filmographer based on Tangerang, Joel Foo. This website is built with Strapi as the CMS, React as the frontend, and designed with Figma.",
 		category: "Personal Website",
 		image: [
 			"/projects/joel/joel-1.png",

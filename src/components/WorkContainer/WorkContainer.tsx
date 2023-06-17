@@ -28,7 +28,7 @@ const WorkContainer = ({ work }: { work: TWorkItem }) => {
 			ref={targetRef}
 		>
 			<div className="detail w-full h-full flex items-center">
-				<div className="w-6/12">
+				<div className="w-11/12">
 					<div className="flex gap-1 mb-1">
 						<h1 className="font-black text-3xl">{work.title}</h1>
 						{work.links !== "" ? (

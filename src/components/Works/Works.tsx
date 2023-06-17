@@ -7,7 +7,7 @@ import WorkContainer from "../WorkContainer/WorkContainer";
 
 const Works = () => {
 	return (
-		<div className="h-[50vh] w-fit relative">
+		<div className="h-fit w-fit relative">
 			<div className="w-5/6 h-fit mx-auto">
 				<motion.div
 					className="title sticky pt-12 left-0 top-0 z-20"

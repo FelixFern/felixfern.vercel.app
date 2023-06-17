@@ -1,10 +1,12 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
 import BlurCircle from "../components/BlurCircle/BlurCircle";
+import Contact from "../components/Contact.astro";
 import Hero from "../components/Hero.jsx";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import WorkExp from "../components/WorkExp";
 import Works from "../components/Works/Works";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -19,11 +21,12 @@ import Works from "../components/Works/Works";
         class="bg-main text-textmain overflow-x-hidden font-nunitoSans scroll-smooth w-screen"
     >
         <div class="hidden md:block">
-            <Navbar client:load />
-            <Hero client:load />
+            <Navbar client:visible />
+            <Hero client:visible />
             <AboutMe />
             <WorkExp client:load />
-            <Works client:load />
+            <Works client:visible />
+            <Contact />
         </div>
         <div class="block md:hidden">
             <div
