@@ -1,5 +1,6 @@
 ---
 import AboutMe from "../components/AboutMe.astro";
+import BlurCircle from "../components/BlurCircle/BlurCircle";
 import Hero from "../components/Hero.jsx";
 import Navbar from "../components/Navbar/Navbar.jsx";
 import WorkExp from "../components/WorkExp";
@@ -15,13 +16,32 @@ import Works from "../components/Works/Works";
         <title>Felix Fernando's Portofolio</title>
     </head>
     <body
-        class="bg-main text-textmain overflow-x-hidden font-nunitoSans scroll-smooth"
+        class="bg-main text-textmain overflow-x-hidden font-nunitoSans scroll-smooth w-screen"
     >
-        <Navbar client:load />
-        <Hero client:load />
-        <AboutMe />
-        <WorkExp client:load />
-        <Works client:load />
+        <div class="hidden md:block">
+            <Navbar client:load />
+            <Hero client:load />
+            <AboutMe />
+            <WorkExp client:load />
+            <Works client:load />
+        </div>
+        <div class="block md:hidden">
+            <div
+                class="h-screen w-screen overflow-hidden flex justify-center items-center"
+            >
+                <h1 class="font-regular text-xl w-7/12 text-center">
+                    currently the
+                    <span class="text-accent font-black"> mobile version</span>
+                    is not available yet, sorry for the inconvinience.
+                </h1>
+                <BlurCircle
+                    classes={"h-[40vh] w-[40vh] top-[50%] left-[-10%] z-10"}
+                />
+                <BlurCircle
+                    classes={"h-[50vh] w-[50vh] top-[0%] right-[-15%] z-10"}
+                />
+            </div>
+        </div>
     </body>
 </html>
 

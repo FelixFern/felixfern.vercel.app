@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import BlurCircle from "./BlurCircle/BlurCircle";
 import WorkExperienceList from "./WorkExperienceList/WorkExperienceList";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { work_exp } from "../utils/work_exp";
+import { work_exp } from "../const/work_exp";
 
 const WorkExp = () => {
 	const targetRef = useRef(null);

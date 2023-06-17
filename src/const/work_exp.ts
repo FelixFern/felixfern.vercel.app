@@ -5,7 +5,7 @@ export const work_exp = [
 		location: "Remote",
 		period: "Jun 2023 - Present",
 		desc: [
-			"Worked closely with team of fullstack developer, backend developer, QA developer, and UI/UX engineer.",
+			"Worked closely with team of fullstack developer, backend developer, QA analyst, and UI/UX designer.",
 		],
 	},
 	{
