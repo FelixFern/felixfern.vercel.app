@@ -85,7 +85,7 @@ const Hero = () => {
 				href="/"
 				style={{ scale, translateY }}
 			>
-				<Button title="resume." />
+				<Button title="resume." links="https://drive.google.com/file/d/1wxSgLJVCPQCo9h5ns2tn_CFxNJ06mPu4/view?usp=sharing"/>
 			</motion.a>
 			<BlurCircle
 				classes={"h-[120vh] w-[120vh] bottom-[-100vh] delay-1000"}

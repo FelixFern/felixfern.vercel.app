@@ -1,9 +1,12 @@
 import React from "react";
 import "./button.scss";
 
-const Button = ({ title }) => {
+const Button = ({ title, links }) => {
     return (
-        <button className="button-container flex items-center text-accent font-bold border-2 border-accent gap-[0.3rem] px-3 py-1 rounded-full font-sourceSans">
+        <a 
+            href={links}
+            className="cursor-pointer button-container flex items-center text-accent font-bold border-2 border-accent gap-[0.3rem] px-3 py-1 rounded-full font-sourceSans"
+        >
             {title}
             <svg
                 width="7"
@@ -17,7 +20,7 @@ const Button = ({ title }) => {
                     fill="#FF985F"
                 ></path>
             </svg>
-        </button>
+        </a>
     );
 };
 
