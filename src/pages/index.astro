@@ -20,12 +20,13 @@ import Footer from "../components/Footer.astro";
     <body
         class="bg-main text-textmain overflow-x-hidden font-nunitoSans scroll-smooth w-screen"
     >
+        <!-- <div class="spinner"></div> -->
         <div class="hidden md:block">
-            <Navbar client:visible />
-            <Hero client:visible />
+            <Navbar client:only="react" />
+            <Hero client:only="react" />
             <AboutMe />
-            <WorkExp client:load />
-            <Works client:visible />
+            <WorkExp client:only="react" />
+            <Works client:only="react" />
             <Contact />
         </div>
         <div class="block md:hidden">
@@ -50,4 +51,19 @@ import Footer from "../components/Footer.astro";
 
 <style>
     @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&family=Source+Sans+Pro:wght@700&Roboto+Mono:wght@700&display=swap");
+    .spinner {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        z-index: 100;
+    }
 </style>
+
+<script>
+    document.querySelector(".spinner").style.display = "none";
+    console.log("test");
+</script>
