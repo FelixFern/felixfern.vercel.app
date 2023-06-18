@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { TWorkItem } from "../../const/works_item";
-import { MdOpenInNew } from "react-icons/md";
-import { AiFillGithub } from "react-icons/ai";
+import { Icon } from "@iconify/react";
 import "./WorkContainer.scss";
 import ImageCarousel from "../ImageCarousel/ImageCarousel";
 import { useState } from "react";
@@ -41,7 +40,8 @@ const WorkContainer = ({ work }: { work: TWorkItem }) => {
 								href={work.links}
 								className="text-accent text-xl hover:opacity-75 transition-all hover:translate-y-[-0.1rem]"
 							>
-								<MdOpenInNew></MdOpenInNew>
+								<Icon icon="mdi:open-in-new"></Icon>
+								{/* <MdOpenInNew></MdOpenInNew> */}
 							</a>
 						) : (
 							<></>
@@ -66,7 +66,8 @@ const WorkContainer = ({ work }: { work: TWorkItem }) => {
 							href={work.repository}
 							className="flex gap-2 text-xl font-bold items-center text-accent hover:opacity-75 transition-opacity"
 						>
-							<AiFillGithub></AiFillGithub>
+							<Icon icon="mdi:github"></Icon>
+							{/* <AiFillGithub></AiFillGithub> */}
 							<h2>Repository</h2>
 						</a>
 					) : (
